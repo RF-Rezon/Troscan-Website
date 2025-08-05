@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { Roboto } from "next/font/google";
+import { Archivo } from "next/font/google";
 
-const roboto = Roboto({
+const archivo = Archivo({
   weight: ["200", "400", "600", "700"],
   subsets: ["latin"],
 });
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} antialiased`}>{children}</body>
+      <body className={`${archivo.className} antialiased`}>{children}</body>
     </html>
   );
 }

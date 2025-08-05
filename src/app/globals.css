@@ -21,21 +21,31 @@
   @apply text-[64px] tracking-[-1.92px];
 }
 .p-nav {
-  @apply text-[96px] tracking-[-2.88px];
+  @apply text-[42px] md:text-[64px] lg:text-[96px] md:leading-none tracking-[-2.88px] leading-[45px];
 }
 .p-logo {
   @apply text-[20px] font-[700] tracking-[-0.6px] leading-[24px];
 }
 
 /* Colour Settings */
-.base-red {
+.base-gold-text {
   @apply text-[#8D493A];
 }
-.base-white {
+.base-gold-bg {
+  @apply bg-[#8D493A];
+}
+
+.base-white-text {
+  @apply text-[#F8EDE3];
+}
+.base-white-bg {
   @apply bg-[#F8EDE3];
 }
 
 /* Additional Settings */
+.btn {
+  @apply py-[12px] px-[26px] rounded-[5px] cursor-pointer transition-all;
+}
 .corner-round {
   @apply rounded-[8px];
 }
@@ -44,4 +54,28 @@
 }
 .shadow {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 50px 0px;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax {
+  position: relative;
+}
+
+.parallax::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: hsla(29, 79%, 38%, 0.295); /* 40% dark overlay */
+  z-index: 0;
+}
+
+.parallax > div {
+  position: relative;
+  z-index: 1;
 }
