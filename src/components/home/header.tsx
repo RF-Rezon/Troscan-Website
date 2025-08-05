@@ -12,10 +12,10 @@ const Header = () => {
             </p>
           </div>
           <div className="space-x-0 lg:space-x-3 space-y-2 lg:space-y-0 flex flex-col lg:flex-row items-center justify-center mx-2">
-            <button className="btn p-2 base-gold-text base-white-bg hover:opacity-80 w-full lg:w-1/5">
+            <button className="btn t-2 base-gold-text base-white-bg hover:opacity-80 w-full lg:w-1/5">
               Our Vision
             </button>
-            <button className="btn p-2 bg-transparent text-white hover:bg-white hover:text-[#8D493A] border border-white w-full lg:w-1/4">
+            <button className="btn t-2 bg-transparent text-white hover:bg-white hover:text-[#8D493A] border border-white w-full lg:w-1/4">
               Explore Expertise
             </button>
           </div>

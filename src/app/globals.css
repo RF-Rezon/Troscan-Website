@@ -2,23 +2,26 @@
 
 /* Text Settings ->>>>>  small to large*/
 
-.p-1 {
+.t-1 {
   @apply text-[14px] leading-[16.8px];
 }
-.p-2 {
-  @apply text-[16px] font-[600];
+.t-2 {
+  @apply text-[16px] leading-[16px] font-[600];
 }
-.p-3 {
+.t-2-light {
+  @apply text-[14px] md:text-[16px] leading-[22.4px];
+}
+.t-3 {
   @apply text-[22px] tracking-[-0.22px] leading-[26.4px];
 }
-.p-4 {
+.t-4 {
   @apply text-[28px] tracking-[-0.56px] leading-[33.6px];
 }
-.p-5 {
+.t-5 {
   @apply text-[40px] tracking-[-0.8px] leading-[48px];
 }
-.p-6 {
-  @apply text-[64px] tracking-[-1.92px];
+.t-6 {
+  @apply text-[40px] lg:text-[64px] tracking-[-1.92px] leading-[40px] md:leading-[64px];
 }
 .p-nav {
   @apply text-[42px] md:text-[64px] lg:text-[96px] md:leading-none tracking-[-2.88px] leading-[45px];
