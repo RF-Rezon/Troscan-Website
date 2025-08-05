@@ -6,8 +6,8 @@ const Header = () => {
         style={{ backgroundImage: "url('/sec1/1.jpeg')" }}
       >
         <div>
-          <div className="md:max-w-4xl max-w-full md:mx-auto text-center md:leading-24 pb-6 mx-2">
-            <p className="p-nav text-white">
+          <div className="md:max-w-4xl max-w-full md:mx-auto text-center pb-6 mx-2">
+            <p className="t-nav text-white">
               Timeless Comfort & Endless Luxury
             </p>
           </div>
