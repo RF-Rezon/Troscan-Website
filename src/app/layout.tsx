@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import Footer from "@/common/footer/footer";
 import Navbar from "@/common/navbar/navbar";
 import { Archivo } from "next/font/google";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${archivo.className} antialiased base-white-bg`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

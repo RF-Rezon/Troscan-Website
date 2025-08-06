@@ -21,7 +21,6 @@ const News_cards = () => {
           </div>
         </div>
       ))}
-      ;
     </>
   );
 };

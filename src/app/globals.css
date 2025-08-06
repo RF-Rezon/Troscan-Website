@@ -33,6 +33,7 @@
 
 /* Colour Settings */
 .base-gold-text {
+  @apply text-[#ffffffbe];
   @apply text-[#8D493A];
 }
 .base-gold-bg {

@@ -1,14 +1,23 @@
 [
   {
     "img": "/sec4/1.jpeg",
-    "alt": "1"
+    "alt": "1",
+    "number": "01",
+    "title": "Serene Urban Retreat",
+    "description": "Where modern comfort meets peaceful sophistication."
   },
   {
     "img": "/sec4/2.jpeg",
-    "alt": "2"
+    "alt": "2",
+    "number": "02",
+    "title": "Luxurious Coastal Living",
+    "description": "Bringing the beauty of the shore into your home."
   },
   {
     "img": "/sec4/3.jpeg",
-    "alt": "3"
+    "alt": "3",
+    "number": "03",
+    "title": "Modern Elegance in Every Room",
+    "description": "Redefining spaces with timeless style and innovation."
   }
 ]
