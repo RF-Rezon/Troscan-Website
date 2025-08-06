@@ -1,9 +1,9 @@
-import About from "@/components/home/aboutus";
-import CarouselSection from "@/components/home/carouselSection";
-import ConnectSection from "@/components/home/connectSection";
-import Header from "@/components/home/header";
-import News from "@/components/home/news";
-import ThirdSection from "@/components/home/thirdsection";
+import About from "@/pages/home/aboutus";
+import CarouselSection from "@/pages/home/carouselSection";
+import ConnectSection from "@/pages/home/connectSection";
+import Header from "@/pages/home/header";
+import News from "@/pages/home/news";
+import ThirdSection from "@/pages/home/thirdsection";
 
 export default function Home() {
   return (

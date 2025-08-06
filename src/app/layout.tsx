@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import Navbar from "@/common/navbar/navbar";
 import { Archivo } from "next/font/google";
 
 const archivo = Archivo({
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${archivo.className} antialiased base-white-bg`}>
+        <Navbar />
         {children}
       </body>
     </html>

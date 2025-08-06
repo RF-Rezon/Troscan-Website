@@ -21,11 +21,14 @@
 .t-6 {
   @apply text-[40px] lg:text-[64px] tracking-[-1.92px] leading-[40px] md:leading-[64px];
 }
-.t-nav {
+.t-header {
   @apply text-[42px] md:text-[64px] lg:text-[96px] md:leading-none tracking-[-2.88px] leading-[45px];
 }
+.t-nav-links {
+  @apply text-[14px] md:text-[16px] font-[600] leading-[16px] cursor-pointer hover:text-[#a15341];
+}
 .t-logo {
-  @apply text-[20px] font-[700] tracking-[-0.6px] leading-[24px];
+  @apply text-[18px] md:text-[20px] font-[700] tracking-[-0.6px] leading-[24px];
 }
 
 /* Colour Settings */
