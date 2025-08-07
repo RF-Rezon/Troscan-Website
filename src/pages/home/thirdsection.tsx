@@ -20,7 +20,7 @@ const ThirdSection = () => {
 
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const textControls = useAnimation();
-  const imageControls = thirdsectionImgs.map(() => useAnimation());
+  const imageControls = useRef(thirdsectionImgs.map(() => useAnimation()));
 
   useEffect(() => {
     const handleResize = () => {
@@ -59,12 +59,12 @@ const ThirdSection = () => {
 
     thirdsectionImgs.forEach((item, idx) => {
       if (relativeScroll >= triggerPoint) {
-        imageControls[idx].start(item.inView);
+        imageControls.current[idx].start(item.inView);
       } else {
-        imageControls[idx].start(item.initial);
+        imageControls.current[idx].start(item.initial);
       }
     });
-  }, [scrollY, imageControls]);
+  }, [scrollY]);
 
   return (
     <div
@@ -100,7 +100,7 @@ const ThirdSection = () => {
             return (
               <motion.div
                 key={index}
-                animate={imageControls[index]}
+                animate={imageControls.current[index]}
                 initial={i.initial}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="relative"
