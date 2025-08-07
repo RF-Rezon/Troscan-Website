@@ -23,7 +23,7 @@ const ExpertiseSection = () => {
   ];
   return (
     <>
-      <div className="min-h-screen mx-auto max-w-[1284px] my-[100px] md:my-[140px] lg:my-[186px] md:space-x-10 -mb-6 md:-mb-0 px-4 relative space-x-6">
+      <div className="mb-16 lg:mb- lg:min-h-screen mx-auto max-w-[1284px] my-[100px] md:my-[140px] lg:my-[186px] md:space-x-10 px-4 relative space-x-6">
         <div className="w-full pb-14 flex items-center justify-end">
           <div className="lg:w-[50%] w-full base-gold-text md:px-6 lg:px-0">
             <div className="lg:mr-10">
@@ -45,7 +45,6 @@ const ExpertiseSection = () => {
                   key={activeImage}
                   initial={{ y: 180 }}
                   animate={{ y: 0 }}
-                  // exit={{ y: -50 }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
                   className="w-full h-full object-cover rounded-[8px] absolute top-0 left-0"
                   src={activeImage}

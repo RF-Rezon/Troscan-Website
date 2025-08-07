@@ -66,22 +66,22 @@
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 50px 0px;
 }
 
-.parallax {
+/* .parallax {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
-.parallax {
+/* .parallax {
   position: relative;
-}
+} */
 
 .parallax::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: hsla(29, 79%, 38%, 0.295); /* 40% dark overlay */
+  background-color: #0c112213;
   z-index: 0;
 }
 

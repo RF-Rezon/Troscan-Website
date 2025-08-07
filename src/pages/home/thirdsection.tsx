@@ -10,9 +10,8 @@ const ThirdSection = () => {
   const [scrollY, setScrollY] = useState(0);
 
   const sectionRef = useRef<HTMLDivElement | null>(null);
-  const textControls = useAnimation(); // For the <p> text animation
+  const textControls = useAnimation();
 
-  // Track screen size
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -23,7 +22,6 @@ const ThirdSection = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Track scroll position
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -32,11 +30,10 @@ const ThirdSection = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Text animation trigger
   useEffect(() => {
     const sectionTop = sectionRef.current?.offsetTop || 0;
     const relativeScroll = scrollY - sectionTop;
-    const triggerPoint = window.innerHeight * 2.5;
+    const triggerPoint = window.innerHeight * 1.2;
 
     if (relativeScroll >= triggerPoint) {
       textControls.start({ opacity: 1, y: 0, transition: { duration: 1 } });
@@ -48,7 +45,7 @@ const ThirdSection = () => {
   return (
     <div
       ref={sectionRef}
-      className="min-h-[600vh] max-w-[1250px] mx-auto my-[100px] md:my-[140px] lg:my-[186px] relative px-4 md:px-0"
+      className="min-h-[300vh] lg:min-h-[500vh] max-w-[1250px] mx-auto my-[100px] md:my-[140px] lg:my-[186px] relative px-4 md:px-0"
     >
       <div className="sticky top-20 h-screen flex items-center justify-center">
         <motion.div
@@ -62,7 +59,6 @@ const ThirdSection = () => {
           </p>
         </motion.div>
 
-        {/* IMAGE GRID */}
         <div className="grid grid-cols-3 grid-rows-2 md:gap-12 gap-y-40 md:gap-y-0">
           {thirdsectionImgs.map((i: any, index: number) => {
             const width =
@@ -79,13 +75,11 @@ const ThirdSection = () => {
 
             const controls = useAnimation();
 
-            // Each image animation toggle based on scroll
             useEffect(() => {
               const sectionTop = sectionRef.current?.offsetTop || 0;
-              const sectionHeight = sectionRef.current?.offsetHeight || 0;
               const relativeScroll = scrollY - sectionTop;
 
-              const triggerPoint = window.innerHeight * 2.5;
+              const triggerPoint = window.innerHeight * 1.2;
 
               if (relativeScroll >= triggerPoint) {
                 controls.start(i.inView);
