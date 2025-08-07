@@ -4,11 +4,11 @@ const Header = () => {
   return (
     <>
       <div
-        className="min-h-screen w-full flex items-center justify-center bg-fixed bg-center bg-cover bg-no-repeat"
+        className="min-h-screen w-full flex-center bg-fixed bg-center bg-cover bg-no-repeat"
         style={{ backgroundImage: "url('/sec1/1.jpeg')" }}
       >
         <div className="bg-[#9e56124b] w-screen h-screen">
-          <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
+          <div className="relative z-10 w-full h-full flex-center flex-col">
             <div className="md:max-w-4xl max-w-full md:mx-auto text-center pb-6 mx-2">
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -19,7 +19,7 @@ const Header = () => {
                 Timeless Comfort & Endless Luxury
               </motion.p>
             </div>
-            <div className="md:space-x-3 space-y-2 lg:space-y-0 flex flex-col md:flex-row items-center justify-center w-[90%] md:w-full">
+            <div className="md:space-x-3 space-y-2 md:space-y-0 flex flex-col md:flex-row items-center justify-center w-[90%] md:w-full">
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
-/* Text Settings ->>>>>  small to large*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
 
 .t-1 {
   @apply text-[12px] md:text-[14px] leading-[16.8px];
@@ -50,6 +56,9 @@
 }
 
 /* Additional Settings */
+.flex-center {
+  @apply flex items-center justify-center;
+}
 .btn {
   @apply py-[12px] px-[26px] rounded-[5px] cursor-pointer transition-all duration-300;
 }
@@ -66,22 +75,11 @@
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 50px 0px;
 }
 
-/* .parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-/* .parallax {
-  position: relative;
-} */
-
 .parallax::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #0c112213;
+  background-color: #0c11223f;
   z-index: 0;
 }
 
@@ -90,7 +88,6 @@
   z-index: 1;
 }
 
-/* global.css বা App.css ফাইলে এটুকু দাও */
 .bg-fill-hover {
   position: relative;
   overflow: hidden;

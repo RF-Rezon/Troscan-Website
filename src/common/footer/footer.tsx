@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
           <div>
             <hr className="text-[#ffffffbe] h-[0.5px] w-[93%] mx-auto" />
-            <div className="flex items-center justify-center h-[70px] w-full">
+            <div className="flex-center h-[70px] w-full">
               <p className="t-1 text-center text-[#ffffffbe]">
                 © 2025, All rights reserved
               </p>

@@ -45,13 +45,13 @@ const ThirdSection = () => {
   return (
     <div
       ref={sectionRef}
-      className="min-h-[300vh] lg:min-h-[500vh] max-w-[1250px] mx-auto my-[100px] md:my-[140px] lg:my-[186px] relative px-4 md:px-0"
+      className="min-h-[300vh] lg:min-h-[500vh] max-w-[1250px] mx-auto my-[100px] md:my-[140px] lg:my-[186px] relative px-4 md:px-0 "
     >
-      <div className="sticky top-20 h-screen flex items-center justify-center">
+      <div className="sticky top-20 h-screen flex-center">
         <motion.div
           animate={textControls}
           initial={{ opacity: 0, y: 50 }}
-          className="absolute flex items-center justify-center h-full"
+          className="absolute flex-center h-full"
         >
           <p className="t-5-special base-gold-text text-center md:w-[45%] md:pb-12 md:-mt-12">
             Transforming spaces with style, through Troscán's exquisite design
