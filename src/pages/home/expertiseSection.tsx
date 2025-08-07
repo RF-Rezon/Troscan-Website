@@ -21,27 +21,23 @@ const ExpertiseSection = () => {
   ];
   return (
     <>
-      <div className="min-h-screen mx-auto max-w-[1284px] my-[100px] md:my-[140px] lg:my-[186px] md:space-x-10 px-4 relative space-x-6">
-        <div className="w-full flex items-center justify-between gap-x-4 pb-10">
-          <div className="flex-1/2"></div>
-          {/* ............................ */}
-          <div className="flex-1/2">
-            <div className="w-full base-gold-text flex flex-col lg:space-y-[86px] space-y-[20px] md:px-6 lg:px-0">
-              <div className="lg:mr-10">
-                <p className="flex items-center space-x-1 md:pb-4 pb-1">
-                  <span className="base-gold-text">&#9679;</span>
-                  <span className="t-1 text-left">Our Expertise</span>
-                </p>
-                <p className="t-6 text-left">
-                  Selecting the ideal elements to elevate your space
-                </p>
-              </div>
+      <div className="min-h-screen mx-auto max-w-[1284px] my-[100px] md:my-[140px] lg:my-[186px] md:space-x-10 -mb-6 md:-mb-0 px-4 relative space-x-6">
+        <div className="w-full pb-14 flex items-center justify-end">
+          <div className="lg:w-[50%] w-full base-gold-text md:px-6 lg:px-0">
+            <div className="lg:mr-10">
+              <p className="flex items-center space-x-1 md:pb-4 pb-1">
+                <span className="base-gold-text">&#9679;</span>
+                <span className="t-1 text-left">Our Expertise</span>
+              </p>
+              <p className="t-6 text-left">
+                Selecting the ideal elements to elevate your space
+              </p>
             </div>
           </div>
         </div>
         <div className="flex items-center justify-between space-x-10">
-          <div className="flex-1/2">
-            <div className="lg:w-[600px] h-[572px] hidden lg:block">
+          <div className="flex-1/2 hidden lg:block">
+            <div className="lg:w-[600px] h-[572px] ">
               <img
                 className="w-full h-full object-cover rounded-[8px]"
                 src={activeImage}
