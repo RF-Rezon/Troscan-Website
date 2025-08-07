@@ -1,9 +1,18 @@
 import carouselsection from "../../utils/jsons/carouselsection/carouselsection.json";
+
+interface CarouselItem {
+  img: string;
+  alt: string;
+  number: string;
+  title: string;
+  description: string;
+}
+
 const CarouselSection = () => {
   return (
     <>
       <div>
-        {carouselsection.map((i: any, index: number) => (
+        {carouselsection.map((i: CarouselItem, index: number) => (
           <div
             key={index}
             className="min-h-screen w-full flex-center bg-center bg-cover bg-no-repeat sticky top-0 parallax"

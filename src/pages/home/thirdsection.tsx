@@ -1,8 +1,17 @@
 "use client";
 
-import { motion, useAnimation } from "framer-motion";
+import { motion, Target, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import thirdsectionImgs from "../../utils/jsons/thirdsection/thirdsectionImgs.json";
+
+interface SectionItem {
+  img: string;
+  alt: string;
+  width: string;
+  height: string;
+  inView: Target;
+  initial: Target;
+}
 
 const ThirdSection = () => {
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
@@ -11,6 +20,7 @@ const ThirdSection = () => {
 
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const textControls = useAnimation();
+  const imageControls = thirdsectionImgs.map(() => useAnimation());
 
   useEffect(() => {
     const handleResize = () => {
@@ -40,12 +50,26 @@ const ThirdSection = () => {
     } else {
       textControls.start({ opacity: 0, y: 50, transition: { duration: 1 } });
     }
-  }, [scrollY]);
+  }, [scrollY, textControls]);
+
+  useEffect(() => {
+    const sectionTop = sectionRef.current?.offsetTop || 0;
+    const relativeScroll = scrollY - sectionTop;
+    const triggerPoint = window.innerHeight * 1.2;
+
+    thirdsectionImgs.forEach((item, idx) => {
+      if (relativeScroll >= triggerPoint) {
+        imageControls[idx].start(item.inView);
+      } else {
+        imageControls[idx].start(item.initial);
+      }
+    });
+  }, [scrollY, imageControls]);
 
   return (
     <div
       ref={sectionRef}
-      className="min-h-[300vh] lg:min-h-[500vh] max-w-[1250px] mx-auto my-[100px] md:my-[140px] lg:my-[186px] relative px-4 md:px-0 "
+      className="min-h-[300vh] lg:min-h-[500vh] max-w-[1250px] mx-auto my-[100px] md:my-[140px] lg:my-[186px] relative px-4 md:px-0"
     >
       <div className="sticky top-20 h-screen flex-center">
         <motion.div
@@ -54,13 +78,13 @@ const ThirdSection = () => {
           className="absolute flex-center h-full"
         >
           <p className="t-5-special base-gold-text text-center md:w-[45%] md:pb-12 md:-mt-12">
-            Transforming spaces with style, through Troscán's exquisite design
-            expertise.
+            Transforming spaces with style, through Troscán&apos;s exquisite
+            design expertise.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-3 grid-rows-2 md:gap-12 gap-y-40 md:gap-y-0">
-          {thirdsectionImgs.map((i: any, index: number) => {
+          {thirdsectionImgs.map((i: SectionItem, index: number) => {
             const width =
               windowWidth && windowWidth < 768 ? "70px" : `${i.height}px`;
             const height =
@@ -73,28 +97,13 @@ const ThirdSection = () => {
               ? "80px"
               : "0px";
 
-            const controls = useAnimation();
-
-            useEffect(() => {
-              const sectionTop = sectionRef.current?.offsetTop || 0;
-              const relativeScroll = scrollY - sectionTop;
-
-              const triggerPoint = window.innerHeight * 1.2;
-
-              if (relativeScroll >= triggerPoint) {
-                controls.start(i.inView);
-              } else {
-                controls.start(i.initial);
-              }
-            }, [scrollY, controls, i]);
-
             return (
               <motion.div
-                animate={controls}
+                key={index}
+                animate={imageControls[index]}
                 initial={i.initial}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="relative"
-                key={index}
               >
                 <div className="mx-auto" style={{ width, height, marginTop }}>
                   <img

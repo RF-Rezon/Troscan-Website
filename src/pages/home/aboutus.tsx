@@ -35,8 +35,8 @@ const About = () => {
             <p className="t-2-light md:pb-6 pb-3 text-left">
               Our expert team blends timeless craftsmanship with innovative
               designs, ensuring each piece and layout reflects your unique taste
-              and lifestyle. Whether you're looking to reimagine your living
-              room.
+              and lifestyle. Whether you&apos;re looking to reimagine your
+              living room.
             </p>
             <button className="py-[14px] px-[26px] rounded-[5px] t-2 bg-[#8D493A] base-white-text hover:bg-[#a15341] cursor-pointer transition-all duration-300">
               More About us

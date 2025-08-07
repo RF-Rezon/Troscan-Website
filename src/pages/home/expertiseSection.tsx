@@ -23,7 +23,7 @@ const ExpertiseSection = () => {
   ];
   return (
     <>
-      <div className="mb-16 lg:mb- lg:min-h-screen mx-auto max-w-[1284px] my-[100px] md:my-[140px] lg:my-[186px] md:space-x-10 px-4 relative space-x-6">
+      <div className="mb-[86px] lg:mb- lg:min-h-screen mx-auto max-w-[1284px] my-[100px] md:my-[140px] lg:my-[186px] md:space-x-10 px-4 relative space-x-6">
         <div className="w-full pb-14 flex items-center justify-end">
           <div className="lg:w-[50%] w-full base-gold-text md:px-6 lg:px-0">
             <div className="lg:mr-10">
