@@ -23,7 +23,7 @@ const About = () => {
               and lifestyle. Whether you're looking to reimagine your living
               room.
             </p>
-            <button className="py-[14px] px-[26px] rounded-[5px] t-2 base-gold-bg base-white-text hover:opacity-80">
+            <button className="py-[14px] px-[26px] rounded-[5px] t-2 bg-[#8D493A] base-white-text hover:bg-[#a15341] cursor-pointer transition-all duration-300">
               More About us
             </button>
           </div>

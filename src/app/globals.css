@@ -33,7 +33,6 @@
 
 /* Colour Settings */
 .base-gold-text {
-  @apply text-[#ffffffbe];
   @apply text-[#8D493A];
 }
 .base-gold-bg {
@@ -49,7 +48,10 @@
 
 /* Additional Settings */
 .btn {
-  @apply py-[12px] px-[26px] rounded-[5px] cursor-pointer transition-all;
+  @apply py-[12px] px-[26px] rounded-[5px] cursor-pointer transition-all duration-300;
+}
+.btn-2 {
+  @apply py-[12px] px-[26px] rounded-[5px] cursor-pointer transition-all duration-300 hover:bg-[#a15341];
 }
 .corner-round {
   @apply rounded-[8px];

@@ -15,7 +15,7 @@ const CarouselSection = () => {
             </div>
             <p className="text-center t-2 text-white pb-8">{i.description}</p>
             <div className="flex items-center justify-center mx-2">
-              <button className="btn t-2 base-gold-text base-white-bg">
+              <button className="btn t-2 base-gold-text base-white-bg hover:opacity-80 shadow">
                 View Project
               </button>
             </div>

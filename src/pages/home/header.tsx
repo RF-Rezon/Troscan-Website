@@ -15,7 +15,7 @@ const Header = () => {
             <button className="btn t-2 base-gold-text base-white-bg hover:opacity-80 w-full lg:w-[129px]">
               Our Vision
             </button>
-            <button className="btn text-[14px] md:text-[16px] font-[600] leading-[21px] bg-transparent text-white hover:bg-white hover:text-[#8D493A] border border-white w-full lg:w-[185px]">
+            <button className="btn text-[14px] md:text-[16px] font-[600] leading-[21px] bg-transparent text-white hover:bg-white hover:text-[#8D493A] border border-white w-full lg:w-[185px] transition-all duration-300">
               Explore Expertise
             </button>
           </div>

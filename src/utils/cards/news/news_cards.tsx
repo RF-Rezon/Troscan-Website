@@ -3,7 +3,7 @@ const News_cards = () => {
   return (
     <>
       {newscards.map((i, index) => (
-        <div key={index} className="mb-5 md:mb-8">
+        <div key={index} className="mb-5 md:mb-8 cursor-pointer">
           <div className="w-[100%] h-[300px] md:h-[349px] mb-2.5 md:mb-4">
             <img
               className="w-full h-full object-cover rounded-[8px]"

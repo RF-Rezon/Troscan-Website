@@ -11,7 +11,7 @@ const ConnectSection = () => {
               Ready to reimagine your space? Connect with us at Troscán to bring
               your vision to life with our expertise in design and decoration.
             </p>
-            <button className="btn t-2 base-gold-bg base-white-text">
+            <button className="btn-2 t-2 base-gold-bg base-white-text ">
               Get in Touch
             </button>
           </div>

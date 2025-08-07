@@ -16,7 +16,7 @@ const News = () => {
               </p>
             </div>
             <div className="md:self-end self-start">
-              <button className="btn t-2 base-gold-bg base-white-text">
+              <button className="btn-2 t-2 base-gold-bg base-white-text">
                 View All News
               </button>
             </div>
