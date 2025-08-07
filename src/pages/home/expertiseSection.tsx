@@ -1,4 +1,6 @@
 "use client";
+
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 const ExpertiseSection = () => {
@@ -35,28 +37,44 @@ const ExpertiseSection = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between space-x-10">
+        <div className="flex items-center justify-between space-x-12">
           <div className="flex-1/2 hidden lg:block">
-            <div className="lg:w-[600px] h-[572px] ">
-              <img
-                className="w-full h-full object-cover rounded-[8px]"
-                src={activeImage}
-                alt="image"
-              />
+            <div className="relative lg:w-[600px] h-[572px] overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={activeImage}
+                  initial={{ y: 180 }}
+                  animate={{ y: 0 }}
+                  // exit={{ y: -50 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className="w-full h-full object-cover rounded-[8px] absolute top-0 left-0"
+                  src={activeImage}
+                  alt="image"
+                />
+              </AnimatePresence>
             </div>
           </div>
           <div className="flex-1/2">
             <div className="w-full base-gold-text lg:space-y-[86px] space-y-[20px] md:px-6 lg:px-0">
               <ul className="t-4 base-gold-text">
                 {services.map((i) => (
-                  <li
+                  <motion.li
+                    whileHover={{
+                      backgroundColor: "#8D493A",
+                      color: "#ffff",
+                      paddingLeft: "16px",
+                    }}
+                    transition={{
+                      duration: 0.3,
+                      ease: "easeInOut",
+                    }}
                     key={i.id}
-                    className="py-2.5 border-b-[1px] flex cursor-pointer"
+                    className="py-[9px] border-b-[1.5px] flex cursor-pointer bg-fill-hover"
                     onMouseEnter={() => setActiveImage(i.img)}
                   >
                     <span className="t-1 mr-4.5">{i.id}</span>
                     <p>{i.title}</p>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>

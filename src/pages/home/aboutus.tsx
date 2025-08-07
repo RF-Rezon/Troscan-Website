@@ -1,5 +1,5 @@
 "use client";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const About = () => {
@@ -43,9 +43,9 @@ const About = () => {
             </button>
           </div>
         </div>
-        <div className="self-start w-full h-[80vh]  corner-round mt-6 lg:mt-0 object-fill">
+        <div className="self-start w-full h-[80vh] corner-round mt-6 lg:mt-0">
           <motion.img
-            className="w-full h-full corner-round"
+            className="w-full h-full corner-round object-cover"
             style={{ scale }}
             src="/sec2/1.jpeg"
             alt="img"
