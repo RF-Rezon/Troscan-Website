@@ -1,7 +1,22 @@
+"use client";
+import { useScroll, useTransform, motion } from "framer-motion";
+import { useRef } from "react";
+
 const About = () => {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.9]);
   return (
     <>
-      <div className="min-h-screen mx-auto flex flex-col lg:flex-row items-center justify-center max-w-[1284px] my-[100px] md:my-[140px] lg:my-[186px] md:space-x-10 px-4">
+      <div
+        ref={sectionRef}
+        className="min-h-screen mx-auto flex flex-col lg:flex-row items-center justify-center max-w-[1284px] my-[100px] md:my-[140px] lg:my-[186px] md:space-x-10 px-4"
+      >
         <div className="w-full lg:min-h-screen base-gold-text flex flex-col lg:space-y-[86px] space-y-[20px] md:px-6 lg:px-0">
           <div className="lg:mr-10">
             <p className="flex items-center space-x-1 md:pb-4 pb-1">
@@ -28,10 +43,14 @@ const About = () => {
             </button>
           </div>
         </div>
-        <div
-          className="self-start w-full min-h-[80vh] bg-center bg-cover bg-no-repeat corner-round mt-6 lg:mt-0"
-          style={{ backgroundImage: "url('/sec2/1.jpeg') " }}
-        ></div>
+        <div className="self-start w-full h-[80vh]  corner-round mt-6 lg:mt-0 object-fill">
+          <motion.img
+            className="w-full h-full corner-round"
+            style={{ scale }}
+            src="/sec2/1.jpeg"
+            alt="img"
+          />
+        </div>
       </div>
     </>
   );

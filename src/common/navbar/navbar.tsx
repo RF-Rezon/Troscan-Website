@@ -1,11 +1,17 @@
 "use client";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="lg:w-[52%] w-[90%] base-white-bg shadow-md fixed top-5 left-1/2 transform -translate-x-1/2 z-50 rounded-[5px] lg:corner-round">
+    <motion.nav
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="lg:w-[52%] w-[90%] base-white-bg shadow-md fixed top-5 left-1/2 transform -translate-x-1/2 z-50 rounded-[5px] lg:corner-round"
+    >
       <div className="flex justify-between items-center h-[50px] md:h-[56px] lg:pl-5 pl-4 pr-[5px]">
         <div className="t-logo base-gold-text cursor-pointer">Troscán</div>
         <ul className="hidden lg:flex space-x-8 text-white">
@@ -50,7 +56,7 @@ const Navbar = () => {
           </div>
         </ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

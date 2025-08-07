@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import thirdsectionImgs from "../../utils/jsons/thirdsection/thirdsectionImgs.json";
 
@@ -19,7 +20,7 @@ const ThirdSection = () => {
   }, []);
 
   return (
-    <div className="min-h-screen max-w-[1250px] mx-auto my-[100px] md:my-[140px] lg:my-[186px] relative px-4 md:px-0">
+    <div className="min-h-[600vh] max-w-[1250px] mx-auto my-[100px] md:my-[140px] lg:my-[186px] relative px-4 md:px-0">
       <div className="absolute flex items-center justify-center h-full">
         <p className="t-5 base-gold-text text-center md:w-[45%] pb-12 -mt-12">
           Transforming spaces with style, through Troscán's exquisite design
@@ -42,7 +43,13 @@ const ThirdSection = () => {
             : "0px";
 
           return (
-            <div className="relative" key={index}>
+            <motion.div
+              viewport={{ margin: "-200% 0px", once: true }}
+              initial={i.initial}
+              whileInView={i.inView}
+              className="relative"
+              key={index}
+            >
               <div className="mx-auto" style={{ width, height, marginTop }}>
                 <img
                   src={i.img}
@@ -50,7 +57,7 @@ const ThirdSection = () => {
                   className="corner-round h-full w-full object-cover"
                 />
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 const Header = () => {
   return (
     <>
@@ -7,17 +9,32 @@ const Header = () => {
       >
         <div>
           <div className="md:max-w-4xl max-w-full md:mx-auto text-center pb-6 mx-2">
-            <p className="t-header text-white">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="t-header text-white"
+            >
               Timeless Comfort & Endless Luxury
-            </p>
+            </motion.p>
           </div>
           <div className="space-x-0 lg:space-x-3 space-y-2 lg:space-y-0 flex flex-col lg:flex-row items-center justify-center mx-2">
-            <button className="btn t-2 base-gold-text base-white-bg hover:opacity-80 w-full lg:w-[129px]">
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 1 }}
+              className="py-[12px] px-[26px] rounded-[5px] cursor-pointer t-2 base-gold-text base-white-bg hover:opacity-80 w-full lg:w-[129px]"
+            >
               Our Vision
-            </button>
-            <button className="btn text-[14px] md:text-[16px] font-[600] leading-[21px] bg-transparent text-white hover:bg-white hover:text-[#8D493A] border border-white w-full lg:w-[185px] transition-all duration-300">
+            </motion.button>
+            <motion.button
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1 }}
+              className="py-[12px] px-[26px] rounded-[5px] cursor-pointer text-[14px] md:text-[16px] font-[600] leading-[21px] bg-transparent text-white hover:bg-white hover:text-[#8D493A] border border-white w-full lg:w-[185px] hover:transition-all hover:duration-300 "
+            >
               Explore Expertise
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>
