@@ -41,7 +41,7 @@ const Navbar = () => {
         </button>
       </div>
       <div
-        className={`lg:hidden base-white-bg shadow-md transition-all ease-in duration-300 overflow-hidden rounded-[5px] ${
+        className={`lg:hidden base-white-bg shadow-md transition-all duration-300 overflow-hidden rounded-[5px] ${
           isOpen ? "max-h-60" : "max-h-0"
         }`}
       >

@@ -69,7 +69,7 @@ const ThirdSection = () => {
   return (
     <div
       ref={sectionRef}
-      className="min-h-[300vh] lg:min-h-[500vh] max-w-[1250px] mx-auto my-[100px] md:my-[140px] lg:my-[186px] relative px-4 md:px-0"
+      className="min-h-[300vh] lg:min-h-[500vh] md:max-w-[1250px] mx-auto my-[100px] md:my-[140px] lg:my-[186px] relative px-4 md:px-0 hidden md:block"
     >
       <div className="sticky top-20 h-screen flex-center">
         <motion.div
