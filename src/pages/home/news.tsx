@@ -3,7 +3,7 @@ import News_cards from "@/utils/cards/news/news_cards";
 const News = () => {
   return (
     <>
-      <div className="min-h-screen mx-auto flex flex-col lg:flex-row items-center justify-center max-w-[1284px] my-[100px] md:my-[140px] lg:mt-[186px] lg:mb-[140px] md:space-x-10 px-4">
+      <div className="min-h-screen mx-auto flex flex-col lg:flex-row items-center justify-center max-w-[1284px] mt-[100px] mb-[50px] md:mt-[140px] lg:mt-[186px] lg:mb-[140px] md:space-x-10 px-4">
         <div className="w-full">
           <div className="flex flex-col md:flex-row items-center justify-between mb-8 md:mb-12">
             <div className="base-gold-text self-start">

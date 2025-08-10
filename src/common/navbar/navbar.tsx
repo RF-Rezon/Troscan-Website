@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -10,14 +11,22 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="lg:w-[52%] w-[90%] base-white-bg shadow-md fixed top-5 left-1/2 transform -translate-x-1/2 z-50 rounded-[5px] lg:corner-round"
+      className="lg:w-[52%] w-[90%] base-white-bg shadow-lg fixed top-5 left-1/2 transform -translate-x-1/2 z-50 rounded-[5px] lg:corner-round"
     >
       <div className="flex justify-between items-center h-[50px] md:h-[56px] lg:pl-5 pl-4 pr-[5px]">
-        <div className="t-logo base-gold-text cursor-pointer">Troscán</div>
+        <div className="t-logo base-gold-text cursor-pointer">
+          <Link href="/">Troscán</Link>
+        </div>
         <ul className="hidden lg:flex space-x-8 text-white">
-          <li className="t-nav-links base-gold-text">About</li>
-          <li className="t-nav-links base-gold-text">Projects</li>
-          <li className="t-nav-links base-gold-text">News</li>
+          <Link href="/About" className="t-nav-links base-gold-text">
+            About
+          </Link>
+          <Link href="/" className="t-nav-links base-gold-text">
+            Projects
+          </Link>
+          <Link href="/" className="t-nav-links base-gold-text">
+            News
+          </Link>
         </ul>
         <div className="hidden lg:block">
           <button className="btn t-2 base-gold-bg base-white-text transition-all duration-300">

@@ -31,7 +31,7 @@ body {
   @apply text-[40px] lg:text-[64px] tracking-[-1.92px] leading-[40px] md:leading-[64px];
 }
 .t-header {
-  @apply text-[42px] md:text-[64px] lg:text-[96px] md:leading-none tracking-[-2.88px] leading-[45px];
+  @apply text-[46px] md:text-[64px] lg:text-[96px] md:leading-[96px] tracking-[-1.8px] leading-[45px];
 }
 .t-nav-links {
   @apply text-[14px] md:text-[16px] font-[600] leading-[16px] cursor-pointer hover:text-[#a15341];

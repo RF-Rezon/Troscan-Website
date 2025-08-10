@@ -1,0 +1,44 @@
+[
+  {
+    "img": "/about/3.jpeg",
+    "alt": "1",
+    "name": "Emma Collins",
+    "title": "Creative Director",
+    "email": "emmacollins@gmail.com"
+  },
+  {
+    "img": "/about/4.jpeg",
+    "alt": "2",
+    "name": "Liam Bennett",
+    "title": "Lead Furniture Designer",
+    "email": "liambennett@gmail.com"
+  },
+  {
+    "img": "/about/5.jpeg",
+    "alt": "3",
+    "name": "Sophia Turner",
+    "title": "Interior Stylist",
+    "email": "sophiaturner@gmail.com"
+  },
+  {
+    "img": "/about/6.jpeg",
+    "alt": "4",
+    "name": "Ethan Wright",
+    "title": "Client Experience Manager",
+    "email": "ethanwright@gmail.com"
+  },
+  {
+    "img": "/about/7.jpeg",
+    "alt": "5",
+    "name": "Isabella Reed",
+    "title": "Lighting Specialist",
+    "email": "isabellareed@gmail.com"
+  },
+  {
+    "img": "/about/8.jpeg",
+    "alt": "6",
+    "name": "Oliver Harris",
+    "title": "Space Planner",
+    "email": "oliverharris@gmail.com"
+  }
+]
