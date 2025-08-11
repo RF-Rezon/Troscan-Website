@@ -1,30 +1,61 @@
+"use client";
 import News_cards from "@/utils/cards/news/news_cards";
-
+import { motion } from "framer-motion";
+import { useRef } from "react";
 const News = () => {
+  const sectionRef = useRef(null);
+
   return (
     <>
-      <div className="min-h-screen mx-auto flex flex-col lg:flex-row items-center justify-center max-w-[1284px] mt-[100px] mb-[50px] md:mt-[140px] lg:mt-[186px] lg:mb-[140px] md:space-x-10 px-4">
+      <div
+        ref={sectionRef}
+        className="min-h-screen mx-auto flex flex-col lg:flex-row items-center justify-center max-w-[1284px] mt-[100px] mb-[50px] md:mt-[140px] lg:mt-[186px] lg:mb-[140px] md:space-x-10 px-4"
+      >
         <div className="w-full">
           <div className="flex flex-col md:flex-row items-center justify-between mb-8 md:mb-12">
             <div className="base-gold-text self-start">
-              <p className="flex items-center space-x-1 md:pb-4 pb-1">
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
+                className="flex items-center space-x-1 md:pb-4 pb-1"
+              >
                 <span className="base-gold-text">&#9679;</span>
                 <span className="t-1 text-left">News</span>
-              </p>
-              <p className="t-6 text-left pb-3 md:pb-0">
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                className="t-6 text-left pb-3 md:pb-0"
+              >
                 Stay Inspired with <br /> Interior Trends
-              </p>
+              </motion.p>
             </div>
             <div className="md:self-end self-start">
-              <button className="btn-2 t-2 base-gold-bg base-white-text">
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                className="btn-2 t-2 base-gold-bg base-white-text"
+              >
                 View All News
-              </button>
+              </motion.button>
             </div>
           </div>
           <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-1 gap-x-2.5">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-1 gap-x-2.5"
+            >
               <News_cards />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

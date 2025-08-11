@@ -1,9 +1,11 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const ExpertiseSection = () => {
+  const sectionRef = useRef(null);
+
   const [activeImage, setActiveImage] = useState("/sec5/1.jpeg");
   const services = [
     { id: "01", title: "Custom Furniture Design", img: "/sec5/1.jpeg" },
@@ -23,21 +25,42 @@ const ExpertiseSection = () => {
   ];
   return (
     <>
-      <div className="mb-[86px] lg:mb- lg:min-h-screen mx-auto max-w-[1284px] my-[100px] md:my-[140px] lg:my-[186px] md:space-x-10 px-4 relative space-x-6">
+      <div
+        ref={sectionRef}
+        className="mb-[86px] lg:mb- lg:min-h-screen mx-auto max-w-[1284px] my-[100px] md:my-[140px] lg:my-[186px] md:space-x-10 px-4 relative space-x-6"
+      >
         <div className="w-full pb-14 flex items-center justify-end">
           <div className="lg:w-[50%] w-full base-gold-text md:px-6 lg:px-0">
             <div className="lg:mr-10">
-              <p className="flex items-center space-x-1 md:pb-4 pb-1">
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
+                className="flex items-center space-x-1 md:pb-4 pb-1"
+              >
                 <span className="base-gold-text">&#9679;</span>
                 <span className="t-1 text-left">Our Expertise</span>
-              </p>
-              <p className="t-6 text-left">
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                className="t-6 text-left"
+              >
                 Selecting the ideal elements to elevate your space
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between space-x-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="flex items-center justify-between space-x-12"
+        >
           <div className="flex-1/2 hidden lg:block">
             <div className="relative lg:w-[600px] h-[572px] overflow-hidden">
               <AnimatePresence mode="wait">
@@ -78,7 +101,7 @@ const ExpertiseSection = () => {
               </ul>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
